@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zimo Li - Neuroscience Researcher</title>
+    <title>Zimo Li - Computational Neuroscientist</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -86,6 +86,30 @@
             margin-top: 2rem;
         }
 
+        .publication-links {
+            margin-top: 1rem;
+        }
+
+        .pdf-link {
+            color: #3498db;
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+
+        .pdf-link:hover {
+            text-decoration: underline;
+        }
+
+        .code-link {
+            color: #2ecc71;  /* Different color from PDF links */
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+
+        .code-link:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -125,36 +149,44 @@
             <h2>Education</h2>
             <h3>University College London</h3>
             <p><strong>MSci Neuroscience</strong> | September 2021 - Present</p>
-            <p>Grade: 78.2% (= 4.0 WES GPA, Top 5%)</p>
-            <p><strong>Core Modules:</strong> Statistical Machine Learning, Neuroinformatics, Theoretical Neuroscience, Neural Computation, Cellular Basis of Brain Function, Computational Cell Biophysics, Cellular Neurophysiology, Human Neuroanatomy, Control and Movement, Advanced Linear Algebra</p>
+            <p>Grade: 78.2% (= 4.0 WES GPA)</p>
+            <p><strong>Core Modules:</strong> Statistical Machine Learning, Neuroinformatics, Theoretical Neuroscience (Audit), Advanced Linear Algebra, Neural Computation, Cellular Basis of Brain Function, Computational Cell Biophysics, Cellular Neurophysiology, Human Neuroanatomy, Control and Movement</p>
         </section>
 
         <section id="publications">
             <h2>Publications and Posters</h2>
             <div class="publication">
-                <p>Campagner, D., et al. (2024). Aeon: an open-source platform to study the neural basis of ethological behaviours over naturalistic timescales. Society for Neuroscience, October 5th, Chicago, U.S.</p>
+                <p>Campagner, D., Bhagat, J., Lopes, G., Calcaterra, L., Ahn, J., Almeida, A., Carvalho, F. J., Cruz, B., Erskine, A., Foslz, O., Li, Z., Lo, C., Nguyen, T., Pouget, A., Rapela, J., Reggiani, J., Ryan, T., SWC Foraging Working Group. Aeon: an open-source platform to study the neural basis of ethological behaviours over naturalistic timescales. (2024) Society for Neuroscience, October 5th, Chicago, U.S..</p>
             </div>
             <div class="publication">
-                <p>Li, Z., Rapela, J., Campagner, D., et al. (2024). Statistical Analysis of Naturalistic Long-Duration Mice Foraging Behaviour. Shenoy Undergraduate Research Fellowship in Neuroscience (SURFiN) Symposium, April 15th, New York City, U.S.</p>
-            </div>
-            <div class="publication">
-                <p>Shinn, M., Li, Z., Reddy, C., Carandini, M., and Harris, K. Darkness Triggers a Distinct Dynamical Operating Regime in Visual Cortex. Paper in Preparation</p>
+                <p>Li, Z., Rapela, J., Campagner, D., SWC Foraging Working Group, and Sahani, M. Statistical Analysis of Naturalistic Long-Duration Mice Foraging Behaviour. (2024) Shenoy Undergraduate Research Fellowship in Neuroscience (SURFiN) Symposium, April 15th, New York City, U.S..
+                    <a href="materials/202404_Poster_SURFiN.pdf" class="pdf-link" target="_blank">[PDF]</a> </p>
             </div>
         </section>
 
         <section id="research">
             <h2>Research Experience</h2>
             <div class="research-item">
-                <h3>Temporal Dynamics of On- and Off-Responses in Auditory Cortex</h3>
+                <h3>Temporal Dynamics of On- and Off-Responses in Auditory Cortex during Gap Detection: A Population Analysis and Modeling Approach</h3>
                 <p><em>September 2024 - Present</em></p>
                 <p>Supervised by Professor Maneesh Sahani, Gatsby Computational Neuroscience Unit and Professor Jennifer Linden, UCL Ear Institute</p>
-                <p>Performing Principal Component Analysis on population responses of primary auditory cortical neurons to characterize temporal evolution of neural activity during gap detection.</p>
+                <p><a href="https://github.com/zimoli02/gap_in_noise.git" class="code-link" target="_blank">[Code]</a></p>
             </div>
             <div class="research-item">
                 <h3>Statistical Analysis on Naturalistic Long-Duration Mouse Foraging Data</h3>
                 <p><em>September 2023 - Present</em></p>
                 <p>Supervised by Professor Maneesh Sahani and Dr Joaquin Rapela, Gatsby Computational Neuroscience Unit</p>
-                <p>Applied advanced statistical tools to quantify long-term, continual mouse kinematics in an open arena.</p>
+                <p>Applied advanced statistical methods to characterize mice naturalistic behavior in continual experiments lasting several days. Used linear dynamical systems to infer mice kinematics from position observations, hidden Markov models to infer discrete states from kinematics and other measurements, and linear regression to relate state occupancy to behavioral events. Found that mice kinematics were substantially more active in the first experimental day, repeatable sequences of behavioral states across sessions and mice, and that foraging events were predictable from the inferred states. Assisting with monitoring mice foraging experiments.
+                    <a href="https://github.com/zimoli02/2023-2024-SURFiN-Foraging-Project.git" class="code-link" target="_blank">[Code]</a>
+                </p>
+            </div>
+            <div class="research-item">
+                <h3>Short-Term Synaptic Plasticity in Cerebellar Information Processing</h3>
+                <p><em>October 2023 - March 2024</em></p>
+                <p>Supervised by Professor R. Angus Silver, Silver Lab</p>
+                <p>Conducted a 7500-word literature review on the mechanism and functional roles of short-term synaptic plasticity in the cerebellar cortical circuit.
+                    <a href="materials/202404_Poster_ReviewSTP.pdf" class="pdf-link" target="_blank">[PDF]</a>
+                </p>
             </div>
         </section>
 
@@ -162,8 +194,8 @@
             <h2>Awards and Honors</h2>
             <ul>
                 <li>Shenoy Undergraduate Research Fellowship in Neuroscience, Simons Foundation (September, 2023)</li>
-                <li>Dean's List, Academic Year 2023-2024</li>
-                <li>Dean's List, Academic Year 2022-2023</li>
+                <li>Dean's List, Academic Year 2023-2024 (September, 2024)</li>
+                <li>Dean's List, Academic Year 2022-2023 (November, 2023)</li>
             </ul>
         </section>
 
