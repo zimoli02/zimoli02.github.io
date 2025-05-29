@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zimo Li - Bio</title>
+    <title>Zimo Li - Home</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
             font-family: 'Times New Roman', Times, serif;
+            .footer-text {
+                bottom: 1rem;
+                font-size: 0.9rem;
+            }
+            .footer-location {
+                font-size: 0.9rem;
+            }
+            .footer-copyright {
+                font-size: 0.9rem;
+            }
         }
         body {
             min-height: 100vh;
@@ -167,6 +181,35 @@
                 gap: 0.5rem;
             }
         }
+        .pdf-link {
+            color: #3498db;
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+
+        .pdf-link:hover {
+            text-decoration: underline;
+        }
+
+        .code-link {
+            color: #2ecc71;  /* Different color from PDF links */
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+
+        .code-link:hover {
+            text-decoration: underline;
+        }
+
+        .people-link {
+            color: #0317cd;  /* Different color from PDF links */
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+
+        .people-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -205,9 +248,25 @@
             </div>
             
             <div class="bio-text">
-                Hello! I am Zimo Li, an MSci Neuroscience student at University College London. My research interests include computational neuroscience, statistical modeling of behavior, and neural data analysis. I am passionate about understanding brain function through data-driven approaches and developing open-source tools for neuroscience research.
+                I am a fourth-year MSci Neuroscience student at University College London, 
+                currently completing my master's thesis project at the Gatsby Computational Neuroscience Unit under the supervision of
+                <a href="https://www.gatsby.ucl.ac.uk/~maneesh/" class="people-link" target="_blank">Maneesh Sahani</a>
+                and 
+                <a href="https://profiles.ucl.ac.uk/5665-jennifer-linden" class="people-link" target="_blank">Jennifer Linden</a>.
+                My research interests lie at the intersection of systems, computational, and theoretical neuroscience, 
+                with a particular focus on how sensory information is represented and processed in the cortex at the population level. 
+                My previous projects have involved various modelling approaches to understand animal behavior, neural coding, and neural signalling.
+                Outside of research, I have a passion for reading and creating handicrafts. 
+                I'm also a trillionaire who owns the Cortex farm in 
+                <a href="https://www.stardewvalley.net/" class="people-link" target="_blank">Stardrew Valley</a>.
             </div>
         </div>
+
+        <div class="footer-text">
+            <div class="footer-location">"云横秦岭家何在" （唐）韩愈</div>
+            <p class="footer-copyright">&copy; May 29th 2025</p>
+        </div>
+
     </div>
 </body>
 
