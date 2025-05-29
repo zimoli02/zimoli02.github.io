@@ -206,7 +206,158 @@
     </main>
     <footer>
         <img src="materials/footer.JPG" alt="Natural scene by Zimo Li" class="footer-img">
-        <p>&copy; 2025 Zimo Li</p>
+        <p>&copy; May 29th 2025</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimo Li - Bio</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background: #f5f6fa;
+        }
+        .header-img {
+            width: 100vw;
+            height: 30vh;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+            /* Optional: fade out bottom */
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .footer-img {
+            width: 100vw;
+            height: 30vh;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+            /* Optional: fade in top */
+            mask-image: linear-gradient(to top, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            min-height: 40vh;
+        }
+        .item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            padding: 1.5rem 2rem;
+            font-size: 1.1rem;
+        }
+        /* Slide-out menu */
+        .menu-hover-zone {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 100vh;
+            z-index: 201;
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -180px;
+            width: 180px;
+            height: 100%;
+            background: #34495e;
+            color: white;
+            transition: left 0.3s;
+            z-index: 200;
+            padding-top: 4rem;
+        }
+        .menu-hover-zone:hover + .side-menu,
+        .side-menu:hover, 
+        .side-menu:focus-within {
+            left: 0;
+        }
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .side-menu li {
+            margin: 2rem 0;
+            text-align: left;
+            padding-left: 2rem;
+        }
+        .side-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-hover-zone"></div>
+    <nav class="side-menu">
+        <ul>
+            <li><a href="index.html">Bio</a></li>
+            <li><a href="publication.html">Publication</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="others.html">Others</a></li>
+        </ul>
+    </nav>
+    <header>
+        <img src="Images/footer.png" alt="Header scene" class="header-img">
+    </header>
+    <main>
+        <div class="container">
+
+        <section id="research">
+            <h2>Research Project</h2>
+            <div class="item">
+                <h3>Neural Representation for Temporal Dynamics in Auditory Cortex during Gap Detection: A Population Analysis</h3>
+                <p><em>September 2024 - Present</em></p>
+                <p>Supervised by Professor Maneesh Sahani, Gatsby Computational Neuroscience Unit and Professor Jennifer Linden, UCL Ear Institute</p>
+                <p><a href="https://github.com/zimoli02/gap_in_noise.git" class="code-link" target="_blank">[Code]</a></p>
+            </div>
+            <div class="item">
+                <h3>Statistical Analysis on Naturalistic Long-Duration Mouse Foraging Data</h3>
+                <p><em>September 2023 - Present</em></p>
+                <p>Supervised by Professor Maneesh Sahani and Dr Joaquin Rapela, Gatsby Computational Neuroscience Unit</p>
+                <p>Applied advanced statistical methods to characterize mice naturalistic behavior in continual experiments lasting several days. Used linear dynamical systems to infer mice kinematics from position observations, hidden Markov models to infer discrete states from kinematics and other measurements, and linear regression to relate state occupancy to behavioral events. Found that mice kinematics were substantially more active in the first experimental day, repeatable sequences of behavioral states across sessions and mice, and that foraging events were predictable from the inferred states. Assisting with monitoring mice foraging experiments.
+                <a href="https://github.com/zimoli02/2023-2024-SURFiN-Foraging-Project.git" class="code-link" target="_blank">[Code]</a>
+                </p>
+            </div>
+            <div class="item">
+                <h3>Short-Term Synaptic Plasticity in Cerebellar Information Processing</h3>
+                <p><em>October 2023 - March 2024</em></p>
+                <p>Supervised by Professor R. Angus Silver, Silver Lab</p>
+                <p>Conducted a 7500-word literature review on the mechanism and functional roles of short-term synaptic plasticity in the cerebellar cortical circuit.
+                <a href="https://drive.google.com/file/d/1LhvwRPfzm7FRamoqRhpogMHibRawI5V1/view?usp=drive_link" class="pdf-link" target="_blank">[PDF]</a>
+                </p>
+            </div>
+            <div class="item">
+                <h3>Mouse V1 Neuron Patterns in Different Luminance Levels</h3>
+                <p><em>May 2022 - October 2023</em></p>
+                <p>Supervised by Professor Kenneth Harris and Dr Maxwell Shinn, Harris/Carandini Lab</p>
+                <p>Performed dimensionality analysis on 2-photon calcium imaging neural data to explore the possible factors of mouse V1 neuron pattern distinction in different light conditions. Proposed a dynamical systems model of mice cortical neural circuit to predict high-dimensional neuronal activities during locomotion. The influence of ambient light on the cor- relation between locomotion and neural activities can be simulated by altering the dynamics of the modelled cortical neural network.
+                </p>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+        <img src="Images/footer.png" alt="Qinling, Xi'an" class="footer-img">
+        <p>&copy; May 29th 2025</p>
     </footer>
 </body>
 </html>

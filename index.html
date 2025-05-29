@@ -5,185 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zimo Li - Bio</title>
     <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
+        body, html {
+            height: 100%;
             margin: 0;
             padding: 0;
-            background: #f5f6fa;
+            font-family: 'Times New Roman', Times, serif;
         }
-        header {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0 1rem 0;
+        body {
+            min-height: 100vh;
+            background: url('Images/footer.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
         }
-        .contact-info {
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.2); /* subtle overlay for readability */
+            z-index: 0;
+        }
+        .main-content {
+            position: relative;
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-        }
-        /* Show menu on hover at left edge */
-        .menu-hover-zone {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 20px;
+            justify-content: flex-end;
+            align-items: center;
             height: 100vh;
-            z-index: 201;
+            z-index: 1;
         }
-        /* Slide-out menu */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: -180px;
-            width: 180px;
-            height: 100%;
-            background: #34495e;
-            color: white;
-            transition: left 0.3s;
-            z-index: 200;
-            padding-top: 4rem;
-        }
-        .menu-hover-zone:hover + .side-menu,
-        .side-menu:hover, 
-        .side-menu:focus-within {
-            left: 0;
-        }
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
-        }
-        .side-menu li {
-            margin: 2rem 0;
-            text-align: left;
-            padding-left: 2rem;
-        }
-        .side-menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-        
-        /* Bio layout */
-        .bio-container {
+        .bio-section {
+            background: rgba(255,255,255,0.85);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            padding: 2.5rem 3.5rem;
+            margin-right: 6vw;
+            min-width: 420px;
+            max-width: 520px;
             display: flex;
-            max-width: 800px;
-            margin: 3rem auto 2rem auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-            overflow: hidden;
+            flex-direction: column;
+            position: relative;
         }
-        .bio-photo {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            margin: 2rem;
-            border-radius: 8px;
-            background: #eee;
-        }
-        .bio-text {
-            flex: 1;
-            padding: 2rem;
+        .bio-header {
             display: flex;
             align-items: center;
+            margin-bottom: 1.5rem;
         }
-        footer {
-            margin-top: 3rem;
-            text-align: center;
-            background: #2c3e50;
-            color: white;
-            padding: 1rem 0 0 0;
+        .bio-headshot {
+            width: 110px;
+            height: 110px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-right: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+            background: #eee;
         }
-        .footer-img {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            display: block;
-            border-radius: 0 0 8px 8px;
+        .bio-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #222;
         }
-        @media (max-width: 700px) {
-            .bio-container {
-                flex-direction: column;
-                align-items: center;
+        .bio-text {
+            font-size: 1.15rem;
+            color: #222;
+            margin-bottom: 1.5rem;
+        }
+        .side-menu-vertical {
+            position: absolute;
+            left: -170px;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            height: 100%;
+            justify-content: center;
+        }
+        .menu-btn {
+            background: rgba(255,255,255,0.92);
+            border-radius: 12px;
+            box-shadow: 4px 6px 0 #bbb;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.4rem;
+            color: #222;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            text-align: left;
+            transition: box-shadow 0.2s, transform 0.2s;
+            text-decoration: none;
+            font-family: inherit;
+        }
+        .menu-btn:hover {
+            box-shadow: 2px 3px 0 #888;
+            transform: translateY(2px);
+            background: rgba(255,255,255,0.98);
+        }
+        @media (max-width: 900px) {
+            .main-content {
+                justify-content: center;
             }
-            .bio-photo {
-                margin: 2rem auto 0 auto;
+            .bio-section {
+                margin-right: 0;
+                min-width: 90vw;
+                max-width: 98vw;
             }
-            .bio-text {
-                padding: 1rem;
+            .side-menu-vertical {
+                left: -120px;
             }
         }
-
-        .container {
-            max-width: 900px;
-            margin: 3rem auto 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .item {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
-            padding: 1.5rem 2rem;
-            font-size: 1.1rem;
-        }
-
     </style>
 </head>
 
 <body>
-    <div class="menu-hover-zone"></div>
-    <nav class="side-menu">
-        <ul>
-            <li><a href="index.html">Bio</a></li>
-            <li><a href="publication.html">Publication</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="https://drive.google.com/file/d/1o9m9PxVb2czNB3Pk2XQHj08ePnpiFkZu/view?usp=drive_link" target="_blank">CV</a></li>
-            <li><a href="others.html">Others</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Zimo Li</h1>
-        <div class="contact-info">
-            <a href="mailto:zimo.li.20@ucl.ac.uk" title="Email">
-                <!-- Email icon SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:6px;">
-                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.29 6.71c.39.36 1.02.36 1.41 0L20 10.01V20H4z"/>
-                </svg>
-                zimo.li.20@ucl.ac.uk
-            </a>
-            <a href="https://github.com/zimoli02" target="_blank" title="GitHub">
-                <!-- GitHub icon SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:6px;">
-                    <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.61-3.37-1.36-3.37-1.36-.45-1.17-1.1-1.48-1.1-1.48-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.11 2.51.32 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
-                </svg>
-                github.com/zimoli02
-            </a>
-        </div>
-    </header>
-    <main>
-        <div class="bio-container">
-            <img src="https://drive.google.com/file/d/14XNJcfiRWngno5S4EygI6SMcfB5d6C60/view?usp=drive_link" alt="Zimo Li" class="bio-photo">
+    <div class="overlay"></div>
+    <div class="main-content">
+        <div class="bio-section">
+            <div class="side-menu-vertical">
+                <a class="menu-btn" href="publication.html">Publication</a>
+                <a class="menu-btn" href="project.html">Project</a>
+                <a class="menu-btn" href="https://drive.google.com/file/d/1o9m9PxVb2czNB3Pk2XQHj08ePnpiFkZu/view?usp=drive_link" target="_blank">CV</a>
+                <a class="menu-btn" href="others.html">Others</a>
+            </div>
+            <div class="bio-header">
+                <img src="Images/bio.JPG" alt="Zimo Li" class="bio-headshot">
+                <div class="bio-name">Zimo Li</div>
+            </div>
             <div class="bio-text">
-                <p>
-                    <!-- Your self-intro here -->
-                    Hello! I am Zimo Li, an MSci Neuroscience student at University College London. 
-                    My research interests include computational neuroscience, statistical modeling of behavior, and neural data analysis. 
-                    I am passionate about understanding brain function through data-driven approaches and developing open-source tools for neuroscience research.
-                </p>
+                Hello! I am Zimo Li, an MSci Neuroscience student at University College London. My research interests include computational neuroscience, statistical modeling of behavior, and neural data analysis. I am passionate about understanding brain function through data-driven approaches and developing open-source tools for neuroscience research.
             </div>
         </div>
-    </main>
-    <footer>
-        <img src="https://drive.google.com/file/d/1ZY8OwCkfMkmW2BpUclz69EF_ptVoftHx/view?usp=drive_link" alt="Natural scene by Zimo Li" class="footer-img">
-        <p>&copy; 2025 Zimo Li</p>
-    </footer>
+    </div>
 </body>
 </html>
