@@ -15,14 +15,24 @@
             padding: 0;
             font-family: 'Times New Roman', Times, serif;
             .footer-text {
-                bottom: 1rem;
-                font-size: 0.9rem;
+                position: absolute;
+                bottom: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+                text-align: center;
+                color: white;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+                font-family: 'Times New Roman', 'SimSun', '宋体', serif; /* Added Chinese fonts */
             }
             .footer-location {
-                font-size: 0.9rem;
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                font-style: italic;
             }
             .footer-copyright {
-                font-size: 0.9rem;
+                font-size: 1rem;
+                margin: 0;
             }
         }
         body {
@@ -249,16 +259,13 @@
             
             <div class="bio-text">
                 I am a fourth-year MSci Neuroscience student at University College London, 
-                currently completing my master's thesis project at the Gatsby Computational Neuroscience Unit under the supervision of
-                <a href="https://www.gatsby.ucl.ac.uk/~maneesh/" class="people-link" target="_blank">Maneesh Sahani</a>
-                and 
-                <a href="https://profiles.ucl.ac.uk/5665-jennifer-linden" class="people-link" target="_blank">Jennifer Linden</a>.
+                currently completing my master's thesis project at the Gatsby Computational Neuroscience Unit under the supervision of <a href="https://www.gatsby.ucl.ac.uk/~maneesh/" class="people-link" target="_blank">Maneesh Sahani</a>
+                and <a href="https://profiles.ucl.ac.uk/5665-jennifer-linden" class="people-link" target="_blank">Jennifer Linden</a>.
                 My research interests lie at the intersection of systems, computational, and theoretical neuroscience, 
                 with a particular focus on how sensory information is represented and processed in the cortex at the population level. 
                 My previous projects have involved various modelling approaches to understand animal behavior, neural coding, and neural signalling.
                 Outside of research, I have a passion for reading and creating handicrafts. 
-                I'm also a trillionaire who owns the Cortex farm in 
-                <a href="https://www.stardewvalley.net/" class="people-link" target="_blank">Stardrew Valley</a>.
+                I'm also a trillionaire who owns the Cortex farm in <a href="https://www.stardewvalley.net/" class="people-link" target="_blank">Stardrew Valley</a>.
             </div>
         </div>
 
