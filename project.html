@@ -27,6 +27,15 @@
             color: white;
             text-decoration: none;
         }
+        /* Show menu on hover at left edge */
+        .menu-hover-zone {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 100vh;
+            z-index: 201;
+        }
         /* Slide-out menu */
         .side-menu {
             position: fixed;
@@ -40,7 +49,9 @@
             z-index: 200;
             padding-top: 4rem;
         }
-        .side-menu:hover, .side-menu:focus-within {
+        .menu-hover-zone:hover + .side-menu,
+        .side-menu:hover, 
+        .side-menu:focus-within {
             left: 0;
         }
         .side-menu ul {
@@ -57,15 +68,7 @@
             text-decoration: none;
             font-size: 1.1rem;
         }
-        /* Show menu on hover at left edge */
-        .menu-hover-zone {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 20px;
-            height: 100vh;
-            z-index: 201;
-        }
+        
         /* Bio layout */
         .bio-container {
             display: flex;
@@ -116,8 +119,23 @@
                 padding: 1rem;
             }
         }
+
+        .container {
+            max-width: 900px;
+            margin: 3rem auto 2rem auto;
+            padding: 0 1rem;
+        }
+        .item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            padding: 1.5rem 2rem;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
+
 <body>
     <div class="menu-hover-zone"></div>
     <nav class="side-menu">
@@ -153,13 +171,13 @@
 
         <section id="research">
             <h2>Research Project</h2>
-            <div class="research-item">
+            <div class="item">
                 <h3>Neural Representation for Temporal Dynamics in Auditory Cortex during Gap Detection: A Population Analysis</h3>
                 <p><em>September 2024 - Present</em></p>
                 <p>Supervised by Professor Maneesh Sahani, Gatsby Computational Neuroscience Unit and Professor Jennifer Linden, UCL Ear Institute</p>
                 <p><a href="https://github.com/zimoli02/gap_in_noise.git" class="code-link" target="_blank">[Code]</a></p>
             </div>
-            <div class="research-item">
+            <div class="item">
                 <h3>Statistical Analysis on Naturalistic Long-Duration Mouse Foraging Data</h3>
                 <p><em>September 2023 - Present</em></p>
                 <p>Supervised by Professor Maneesh Sahani and Dr Joaquin Rapela, Gatsby Computational Neuroscience Unit</p>
@@ -167,7 +185,7 @@
                 <a href="https://github.com/zimoli02/2023-2024-SURFiN-Foraging-Project.git" class="code-link" target="_blank">[Code]</a>
                 </p>
             </div>
-            <div class="research-item">
+            <div class="item">
                 <h3>Short-Term Synaptic Plasticity in Cerebellar Information Processing</h3>
                 <p><em>October 2023 - March 2024</em></p>
                 <p>Supervised by Professor R. Angus Silver, Silver Lab</p>
@@ -175,7 +193,7 @@
                 <a href="https://drive.google.com/file/d/1LhvwRPfzm7FRamoqRhpogMHibRawI5V1/view?usp=drive_link" class="pdf-link" target="_blank">[PDF]</a>
                 </p>
             </div>
-            <div class="research-item">
+            <div class="item">
                 <h3>Mouse V1 Neuron Patterns in Different Luminance Levels</h3>
                 <p><em>May 2022 - October 2023</em></p>
                 <p>Supervised by Professor Kenneth Harris and Dr Maxwell Shinn, Harris/Carandini Lab</p>
@@ -183,7 +201,7 @@
                 </p>
             </div>
         </section>
-        
+
         </div>
     </main>
     <footer>

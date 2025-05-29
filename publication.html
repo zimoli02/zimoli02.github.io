@@ -27,6 +27,15 @@
             color: white;
             text-decoration: none;
         }
+        /* Show menu on hover at left edge */
+        .menu-hover-zone {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 100vh;
+            z-index: 201;
+        }
         /* Slide-out menu */
         .side-menu {
             position: fixed;
@@ -40,7 +49,9 @@
             z-index: 200;
             padding-top: 4rem;
         }
-        .side-menu:hover, .side-menu:focus-within {
+        .menu-hover-zone:hover + .side-menu,
+        .side-menu:hover, 
+        .side-menu:focus-within {
             left: 0;
         }
         .side-menu ul {
@@ -57,15 +68,7 @@
             text-decoration: none;
             font-size: 1.1rem;
         }
-        /* Show menu on hover at left edge */
-        .menu-hover-zone {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 20px;
-            height: 100vh;
-            z-index: 201;
-        }
+        
         /* Bio layout */
         .bio-container {
             display: flex;
@@ -116,8 +119,25 @@
                 padding: 1rem;
             }
         }
+
+        .container {
+            max-width: 900px;
+            margin: 3rem auto 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            padding: 1.5rem 2rem;
+            font-size: 1.1rem;
+        }
+
     </style>
 </head>
+
 <body>
     <div class="menu-hover-zone"></div>
     <nav class="side-menu">
@@ -153,13 +173,13 @@
 
         <section id="publications">
             <h2>Publications and Posters</h2>
-            <div class="publication">
+            <div class="item">
                 <p>Bhagat, J., Campagner, D., Lopes, G., Calcaterra, L.,Almeida, A., Lo, C., Nguyen, T., Pouget, A., Ryan, T., Marin, M., Ahn, J., Carvalho, F. J., Cruz, B., Erskine, A., Foslz, O., Li, Z., Rapela, J., Reggiani, J., SWC Foraging Working Group. Aeon: an open -source platform for testing normative models of natural behaviours and their neural implementations. (2025) Computational and Systems Neuroscience (COSYNE), March 27th, Montreal, QC, Canada.</p>
             </div>
-            <div class="publication">
+            <div class="item">
                 <p>Campagner, D., Bhagat, J., Lopes, G., Calcaterra, L., Ahn, J., Almeida, A., Carvalho, F. J., Cruz, B., Erskine, A., Foslz, O., Li, Z., Lo, C., Nguyen, T., Pouget, A., Rapela, J., Reggiani, J., Ryan, T., SWC Foraging Working Group. Aeon: an open-source platform to study the neural basis of ethological behaviours over naturalistic timescales. (2024) Society for Neuroscience, October 5th, Chicago, U.S..</p>
             </div>
-            <div class="publication">
+            <div class="item">
                 <p>Li, Z., Rapela, J., Campagner, D., SWC Foraging Working Group, and Sahani, M. Statistical Analysis of Naturalistic Long-Duration Mice Foraging Behaviour. (2024) Shenoy Undergraduate Research Fellowship in Neuroscience (SURFiN) Symposium, April 15th, New York City, U.S..
                     <a href="https://drive.google.com/file/d/10LBPxjHKYmA2uRDX7DnwUl2NYRFTQmDQ/view?usp=drive_link" class="pdf-link" target="_blank">[PDF]</a> </p>
             </div>
