@@ -27,6 +27,15 @@
             color: white;
             text-decoration: none;
         }
+        /* Show menu on hover at left edge */
+        .menu-hover-zone {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 100vh;
+            z-index: 201;
+        }
         /* Slide-out menu */
         .side-menu {
             position: fixed;
@@ -40,7 +49,9 @@
             z-index: 200;
             padding-top: 4rem;
         }
-        .side-menu:hover, .side-menu:focus-within {
+        .menu-hover-zone:hover + .side-menu,
+        .side-menu:hover, 
+        .side-menu:focus-within {
             left: 0;
         }
         .side-menu ul {
@@ -57,15 +68,7 @@
             text-decoration: none;
             font-size: 1.1rem;
         }
-        /* Show menu on hover at left edge */
-        .menu-hover-zone {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 20px;
-            height: 100vh;
-            z-index: 201;
-        }
+        
         /* Bio layout */
         .bio-container {
             display: flex;
@@ -150,7 +153,7 @@
     </header>
     <main>
         <div class="bio-container">
-            <img src="materials/bio.JPG" alt="Zimo Li" class="bio-photo">
+            <img src="https://drive.google.com/file/d/14XNJcfiRWngno5S4EygI6SMcfB5d6C60/view?usp=drive_link" alt="Zimo Li" class="bio-photo">
             <div class="bio-text">
                 <p>
                     <!-- Your self-intro here -->
@@ -162,7 +165,7 @@
         </div>
     </main>
     <footer>
-        <img src="materials/footer.JPG" alt="Natural scene by Zimo Li" class="footer-img">
+        <img src="https://drive.google.com/file/d/1ZY8OwCkfMkmW2BpUclz69EF_ptVoftHx/view?usp=drive_link" alt="Natural scene by Zimo Li" class="footer-img">
         <p>&copy; 2025 Zimo Li</p>
     </footer>
 </body>
