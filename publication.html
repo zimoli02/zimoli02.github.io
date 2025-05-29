@@ -23,16 +23,42 @@
             mask-image: linear-gradient(to bottom, black 0%, black 60%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.4) 90%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.4) 90%, transparent 100%);
         }
+        footer {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
         .footer-img {
-            width: 100vw;
-            height: 70vh;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             display: block;
-            position: relative;
+            position: absolute;
             z-index: 1;
             /* Optional: fade in top */
             mask-image: linear-gradient(to top, black 0%, black 60%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.4) 90%, transparent 100%);
             -webkit-mask-image: linear-gradient(to top, black 0%, black 60%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.4) 90%, transparent 100%);
+
+        }
+        .footer-text {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-family: 'Times New Roman', 'SimSun', '宋体', serif; /* Added Chinese fonts */
+        }
+        .footer-location {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        .footer-copyright {
+            font-size: 1rem;
+            margin: 0;
         }
         .container {
             max-width: 900px;
@@ -125,7 +151,10 @@
     </main>
     <footer>
         <img src="Images/footer.jpg" alt="Qinling, Xi'an" class="footer-img">
-        <p>&copy; May 29th 2025</p>
+            <div class="footer-text">
+            <div class="footer-location">"云横秦岭家何在" （唐）韩愈</div>
+            <p class="footer-copyright">&copy; May 29th 2025</p>
+    </div>
     </footer>
 </body>
 </html>
